@@ -1,6 +1,9 @@
 # RunSamples
+A program to automatically run competitive programming test cases stored as text files against a C++ program. It is built to work with Linux-style paths and has only been tested on Ubuntu, but it can easily be modified to work on Windows. The script will look for files named `inX.txt` and `ansX.txt`, where `X` is an integer, and it will use them as input and expected output, respectively. In addition, it will look for a json file with the same name as the source code file but with the suffix `:tests`, so that it can be combined with the very useful extension [Competitive Companion](https://codeforces.com/blog/entry/60073). For example, if the .cpp file is `a.cpp`, the json file should be `a.cpp:tests`
 
-A program to automatically run competitive programming test cases stored as text files against a C++ program. It is built to work with Linux-style paths and has only been tested on Ubuntu, but it can easily be modified to work on windows. The script will look for files named `inX.txt` and `ansX.txt`, where `X` is an integer, and it will use them as input and expected output, respectively. In addition, it will look for a json file with the same name as the source code file but with the suffix `:tests`, so that it can be combined with the very useful extension [Competitive Companion](https://codeforces.com/blog/entry/60073). For example, if the .cpp file is `a.cpp`, the json file should be `a.cpp:tests`
+## Demo - Integration with Vim
+
+![Example of usage](./img/g1.gif)
 
 ## Requirements
 
@@ -32,7 +35,7 @@ python3 ./eval_samples.py {ABSOLUTE_PATH_OF_EXECUTABLE} {PARENT_DIRECTORY_OF_THE
 ]
 ```
 
-You can use the Python script `makesamples.py` to save the json file with the expected format. Note that to use this script you will need some additional requirements.
+You can use the Python script `makesamples.py` to save the json file with the expected format. Note that to use this script you will need some additional requirements. This script will take as an argument the name (without extension) of the .cpp file that you want to download test cases for.
 
 ## Integration with Vim
 
@@ -44,6 +47,3 @@ The program can be integrated to work very nicely with the Vim text editor. I ha
 
 This will compile the current file in vim and then run it against the sample test cases in the current directory using the Python script.
 
-## Screenshots and GIFs
-
-![Example of usage](./img/g1.gif)
