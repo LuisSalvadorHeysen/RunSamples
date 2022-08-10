@@ -19,6 +19,12 @@ A program to automatically run competitive programming test cases stored as text
 python3 ./eval_samples.py {ABSOLUTE_PATH_OF_EXECUTABLE} {PARENT_DIRECTORY_OF_THE_EXECUTABLE}
 ```
 
+A way to avoid writting the absolute path of the executable is to simply use `./`, and use `.` for the parent directory:
+
+```bash
+python3 ./eval_samples.py {./NAME_OF_THE_EXECUTABLE} {.}
+```
+
 ## Json File Expected Format
 
 ```
