@@ -3,7 +3,7 @@ A program to automatically run competitive programming test cases stored as text
 
 ## Demo - Integration with Vim
 
-<img src="img/g1.gif" width="800"/>
+<img src="img/g1.gif" width="600"/>
 
 ## Requirements for the main script
 
