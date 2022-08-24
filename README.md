@@ -3,7 +3,7 @@ A program to automatically run competitive programming test cases stored as text
 
 ## Demo - Integration with Vim
 
-![Example of usage](./img/g1.gif)
+<img src="img/g1.gif" width="600"/>
 
 ## Requirements for the main script
 
@@ -17,6 +17,12 @@ A program to automatically run competitive programming test cases stored as text
 
 ```bash
 python3 ./eval_samples.py {ABSOLUTE_PATH_OF_EXECUTABLE} {PARENT_DIRECTORY_OF_THE_EXECUTABLE}
+```
+
+A way to avoid writing the absolute path of the executable is to simply use `./`, and use `.` for the parent directory:
+
+```bash
+python3 ./eval_samples.py {./NAME_OF_THE_EXECUTABLE} {.}
 ```
 
 ## Json File Expected Format
