@@ -7,7 +7,9 @@ import os
 import sys
 import signal
 
-filename = list(sys.argv)[1]
+cwd = os.getcwd()
+
+filename = cwd + "/" + list(sys.argv)[1]
 
 PORT = 12345
 

@@ -11,17 +11,18 @@ RED = "\033[0;31m"
 ORANGE = "\033[0;33m"
 NO_COLOR = "\033[0m"
 
+
 print("")
 
+cwd = os.getcwd()
 arguments = list(sys.argv)
-sample_file_path = arguments[1]
-file_dir = arguments[2]
+sample_file_path = cwd + "/" + arguments[1]
+file_dir = cwd
 json_tests = True
 
 try:
     samples_file = open(sample_file_path + ".cpp:tests")
 except FileNotFoundError:
-    print(sample_file_path)
     print(f"{RED}ERROR:{NO_COLOR} No json file found for test cases.")
     json_tests = False
 

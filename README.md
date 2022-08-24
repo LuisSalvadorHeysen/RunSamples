@@ -12,17 +12,18 @@ A program to automatically run competitive programming test cases stored as text
 ## Installation
 
 * Download the python script `eval_samples.py`.
+* To run the file from anywhere in your system, execute the following command and move the file to your `~/bin` folder:
+
+```bash
+chmod +x eval_samples.py
+```
+
+Note: You can do this with any of the files if you wish.
 
 ## Usage
 
 ```bash
-python3 ./eval_samples.py {ABSOLUTE_PATH_OF_EXECUTABLE} {PARENT_DIRECTORY_OF_THE_EXECUTABLE}
-```
-
-A way to avoid writing the absolute path of the executable is to simply use `./`, and use `.` for the parent directory:
-
-```bash
-python3 ./eval_samples.py {./NAME_OF_THE_EXECUTABLE} {.}
+eval_samples.py {NAME_OF_THE_EXECUTABLE} {.}
 ```
 
 ## Json File Expected Format
@@ -48,7 +49,7 @@ You can use the Python script `makesamples.py` to save the json file with the ex
 The program can be integrated to work very nicely with the Vim text editor. I have included a bash file with the compilation flags I use so that I can compile the program easily and run it immediately after. You can download the bash file `build.sh` to use it (you can also add it to $PATH so that you don't have to type its absolute path). The way I have set it up is with the following line of code in my .vimrc. You can map it to any key bind of your preference.
 
 ```bash
-!build.sh %:p:h/%:r && python3 "{PATH_TO_PYTHON_SCRIPT}" %:p:h/%:r %:r
+!build.sh %:p:h/%:r && eval_samples.py %:p:h/%:r %:r
 ```
 
 This will compile the current file in vim and then run it against the sample test cases in the current directory using the Python script.
