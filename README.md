@@ -18,12 +18,12 @@ A program to automatically run competitive programming test cases stored as text
 chmod +x eval_samples.py
 ```
 
-Note: You can do this with any of the files if you wish.
+Note: The process is the same for all the files you want to execute globally.
 
 ## Usage
 
 ```bash
-eval_samples.py {NAME_OF_THE_EXECUTABLE} {.}
+eval_samples.py {NAME_OF_THE_EXECUTABLE_WITHOUT_EXTENSION}
 ```
 
 ## Json File Expected Format
@@ -46,10 +46,10 @@ You can use the Python script `makesamples.py` to save the json file with the ex
 
 ## Integration with Vim
 
-The program can be integrated to work very nicely with the Vim text editor. I have included a bash file with the compilation flags I use so that I can compile the program easily and run it immediately after. You can download the bash file `build.sh` to use it (you can also add it to $PATH so that you don't have to type its absolute path). The way I have set it up is with the following line of code in my .vimrc. You can map it to any key bind of your preference.
+The program can be integrated to work very nicely with the Vim text editor. I have included a bash file with the compilation flags I use so that I can compile the program easily and run it immediately after. You can download the bash file `build.sh` to use it. The way I have set it up is with the following line of code in my .vimrc. You can map it to any key bind of your preference.
 
 ```bash
-!build.sh %:p:h/%:r && eval_samples.py %:p:h/%:r %:r
+!build.sh %:r && eval_samples.py %:r
 ```
 
 This will compile the current file in vim and then run it against the sample test cases in the current directory using the Python script.
