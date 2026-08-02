@@ -1,5 +1,11 @@
 # RunSamples
 
+> **Note:** This started as a personal tool I wrote in 2022. In 2026 I revisited it
+> with Claude, mostly out of curiosity about what a review of my own old code would
+> turn up. It found a fair amount: crashes on malformed input, wrong verdicts when a
+> solution segfaulted, and no time limit at all. Those are fixed here. Left up
+> as-is, old commits and all.
+
 Run a competitive programming solution against its sample tests, from the editor,
 with real verdicts: **AC / WA / RE / TLE**.
 
