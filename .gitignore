@@ -1,0 +1,19 @@
+# Editor / OS noise (a .swp file was committed to this repo once)
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Competitive programming build output and scratch files
+*:tests
+in_temp_file
+int
+out1
+out2
+checker_log
+in[0-9]*.txt
+ans[0-9]*.txt
